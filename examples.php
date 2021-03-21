@@ -1,10 +1,11 @@
 <?php
-    include_once "dados.php";
-
     include_once "conexao.php";
 
     $sql = 'select * from tb_pais';
     $paises = $con->query($sql);
+
+    $id = $_GET['id'];
+
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -111,11 +112,11 @@
 						<h2>Tables</h2>
 						<p>Tables should be used to display data and not used for laying out your website:</p>
 						<table style="width:100%; border-spacing:0;">
-						<tr><th>Item</th><th>Description</th></tr>
-						<tr><td>Item 1</td><td>Description of Item 1</td></tr>
-						<tr><td>Item 2</td><td>Description of Item 2</td></tr>
-						<tr><td>Item 3</td><td>Description of Item 3</td></tr>
-						<tr><td>Item 4</td><td>Description of Item 4</td></tr>
+						<tr><th>Sigla</th><th>Nome</th><th>Excluir</th></tr>
+						<tr><td>Item 1</td><td>Description of Item 1</td><td><a href="">X</a> </td></tr>
+						<tr><td>Item 2</td><td>Description of Item 2</td><td><a href="">X</a> </td></tr>
+						<tr><td>Item 3</td><td>Description of Item 3</td><td><a href="">X</a> </td></tr>
+						<tr><td>Item 4</td><td>Description of Item 4</td><td><a href="">X</a> </td></tr>
 						</table>
 						<h2>Form Elements</h2>
 						<form action="#" method="post">

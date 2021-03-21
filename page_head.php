@@ -1,13 +1,13 @@
 <head>
-    <title><?=$titulo?></title>
+    <title>Site</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,600|Source+Code+Pro" rel="stylesheet" />
-    <!--[if lte IE 8]><script src="js/html5shiv.js" type="text/javascript"></script><![endif]-->
+    <!--[if lte IE 8]><script src="http://localhost/segundophp/js/html5shiv.js" type="text/javascript"></script><![endif]-->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="js/jquery.dropotron.min.js"></script>
-    <script src="js/skel.min.js">
+    <script src="http://localhost/segundophp/js/jquery.dropotron.min.js"></script>
+    <script src="http://localhost/segundophp/js/skel.min.js">
         {
-            prefix: 'css/style',
+            prefix: 'http://localhost/segundophp/css/style',
                 preloadStyleSheets: true,
             resetCSS: true,
             boxModel: 'border',

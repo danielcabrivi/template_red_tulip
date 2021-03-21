@@ -11,15 +11,16 @@
 
             <nav id="main-nav" class="8u">
                 <ul>
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="examples.php">Examples</a></li>
-                    <li><a href="apage.php">A Page</a></li>
-                    <li><a href="anotherpage.php">Another Page</a></li>
+                    <li><a href="/segundophp/index.php">Home</a></li>
+                    <li><a href="/segundophp/examples.php">Examples</a></li>
+                    <li><a href="/segundophp/apage.php">A Page</a></li>
+                    <li><a href="/segundophp/anotherpage.php">Page</a></li>
+                    <li><a href="/segundophp/contato.php">Contact</a></li>
                     <li>
-                        <a href="#">Example Drop Down</a>
+                        <a href="#">Gerenciamento de conteúdo</a>
                         <ul>
-                            <li><a href="">Drop Down 1</a></li>
-                            <li><a href="#">Drop Down 2</a></li>
+                            <li><a href="/segundophp/useful_links">Useful links</a></li>
+                            <li><a href="#">Estado</a></li>
                             <li>
                                 <a href="#">Drop Down 3</a>
                                 <ul>
@@ -32,7 +33,6 @@
                             </li>
                         </ul>
                     </li>
-                    <li><a href="contato.php">Contact</a></li>
                 </ul>
             </nav>
         </div>

@@ -1,6 +1,4 @@
 <?php
-include_once "dados.php";
-
 include_once "conexao.php";
 
 $sql = 'select * from tb_sites';
@@ -73,7 +71,7 @@ include_once "page_header.php"
 
             <section class="8u">
                 <h2>Cadastro de Useful Links</h2>
-                <form action="envia_banco.php" method="post">
+                <form action="envia_banco.php" method="get">
                     <div class="form_settings">
                         <p><span>Nome do site</span><input type="text" name="nome" /></p>
                         <p><span>Url</span><input type="text" name="url" /></p>

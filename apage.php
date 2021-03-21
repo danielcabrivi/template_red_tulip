@@ -1,5 +1,5 @@
 <?php
-include_once "dados.php"
+
 ?>
 <!DOCTYPE HTML>
 <html>
