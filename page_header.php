@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION['login_ativo'])){
+    $_SESSION['login_ativo'] = false;
+}
+
 ?>
 <div id="header_container">
     <div class="container">
@@ -11,11 +15,11 @@ session_start();
                     <?php
                     if ($_SESSION['login_ativo']):
                     ?>
-                    <a href="logout.php">Sair</a>
+                    <a href="/segundophp/logout.php">Sair</a>
                     <?php
                     else:
                     ?>
-                    <a href="login.php">Login</a>
+                    <a href="/segundophp/login.php">Login</a>
                     <?php
                     endif;
                     ?>

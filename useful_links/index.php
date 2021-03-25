@@ -1,5 +1,15 @@
 <?php
-include_once "../conexao.php";
+    session_start();
+    if (!isset($_SESSION['login_ativo']))
+        $_SESSION['login_ativo'] = false;
+
+
+    if (!$_SESSION['login_ativo'])
+        Header('Location: /segundophp/login.php?redirect='.$_SERVER['REQUEST_URI']);
+
+    session_write_close();
+
+    include_once "../conexao.php";
 
     $sql = 'select * from tb_sites';
     $useful_links = $con->query($sql);
@@ -11,7 +21,7 @@ include_once "../conexao.php";
     ?>
 	<body>
     <?php
-    include_once "../page_header.php"
+    include_once "../page_header.php";
     ?>
 
 		<div id="site_content">
@@ -34,11 +44,7 @@ include_once "../conexao.php";
                             endforeach;
                             ?>
                         </table>
-
-
-
 					</section>
-
 				</div>
 		    </div>
 		</div>

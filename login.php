@@ -5,6 +5,12 @@ if(isset($_GET['erro_login'])){
     $erro = "";
 }
 
+if(isset($_GET['redirect'])){
+    $redireciona = $_GET['redirect'];
+}else{
+    $redireciona = '/segundophp/index.php';
+}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -25,7 +31,7 @@ include_once "page_header.php"
             <section class="12u">
                 <h1>LOGIN</h1><br/>
                 <h2><?=$erro?></h2>
-                <form action="autenticar.php" method="post">
+                <form action="autenticar.php?redirect=<?=$redireciona?>" method="post">
                     <div class="form_settings">
                         <p>
                             <span>Usuário</span>
