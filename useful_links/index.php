@@ -1,9 +1,4 @@
 <?php
-session_start();
-$_SESSION['login_ativo'] = false;
-$_SESSION['username'] = null;
-
-
 include_once "../conexao.php";
 
     $sql = 'select * from tb_sites';

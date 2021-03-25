@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <div id="header_container">
     <div class="container">
         <!-- Header -->
@@ -5,7 +8,17 @@
             <div class="4u">
                 <div class="wrapper">
                     <h1><a href="index.php">CSS3<span class="header_colour">_red_tulip</span></a></h1>
-                    <h2>Daniel Carlos de Brito Viana</h2>
+                    <?php
+                    if ($_SESSION['login_ativo']):
+                    ?>
+                    <a href="logout.php">Sair</a>
+                    <?php
+                    else:
+                    ?>
+                    <a href="login.php">Login</a>
+                    <?php
+                    endif;
+                    ?>
                 </div>
             </div>
 

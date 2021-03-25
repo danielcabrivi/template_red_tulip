@@ -1,6 +1,6 @@
 <?php
 if(isset($_GET['erro_login'])){
-    $erro = "Login ou senha inválidos";
+    $erro = "ERRO: Login ou senha inválidos !!!!";
 }else{
     $erro = "";
 }
@@ -24,7 +24,7 @@ include_once "page_header.php"
         <div class="row">
             <section class="12u">
                 <h1>LOGIN</h1><br/>
-                <h2>ERRO: <?=$erro?> !!!!!!!!!!!!!!!!!!!!</h2>
+                <h2><?=$erro?></h2>
                 <form action="autenticar.php" method="post">
                     <div class="form_settings">
                         <p>

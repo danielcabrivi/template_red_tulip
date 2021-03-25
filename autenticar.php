@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once "conexao.php";
 
 $username = $_POST['username'];
@@ -9,7 +9,9 @@ $sql = "select * from tb_usuario where login = '$username' and senha = '$senha'"
 $resultado = $con->query($sql);
 
 if ($resultado->rowCount()){
+    //credenciais válidas
     $_SESSION['login_ativo'] = true;
+    Header('Location: index.php');
 }else{
     //credenciais inválidas
     $_SESSION['login_ativo'] = false;
