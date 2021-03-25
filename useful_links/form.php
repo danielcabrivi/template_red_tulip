@@ -15,8 +15,6 @@ include_once "../conexao.php";
         $id = 0;
     }
 
-
-
 ?>
 <!DOCTYPE HTML>
 <html>

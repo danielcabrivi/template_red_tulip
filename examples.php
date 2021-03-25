@@ -4,7 +4,8 @@
     $sql = 'select * from tb_pais';
     $paises = $con->query($sql);
 
-    $id = $_GET['id'];
+    $sql = 'select * from tb_estados';
+    $estados = $con->query($sql);
 
 ?>
 <!DOCTYPE HTML>
@@ -111,13 +112,18 @@
 						pariatur.</p>
 						<h2>Tables</h2>
 						<p>Tables should be used to display data and not used for laying out your website:</p>
-						<table style="width:100%; border-spacing:0;">
-						<tr><th>Sigla</th><th>Nome</th><th>Excluir</th></tr>
-						<tr><td>Item 1</td><td>Description of Item 1</td><td><a href="">X</a> </td></tr>
-						<tr><td>Item 2</td><td>Description of Item 2</td><td><a href="">X</a> </td></tr>
-						<tr><td>Item 3</td><td>Description of Item 3</td><td><a href="">X</a> </td></tr>
-						<tr><td>Item 4</td><td>Description of Item 4</td><td><a href="">X</a> </td></tr>
+
+                        <table style="width:100%; border-spacing:0;">
+						    <tr><th>Sigla</th><th>Nome</th><th>Excluir</th></tr>
+                            <?php
+                            foreach ($estados as $estado):
+                            ?>
+                            <tr><td><?=$estado['uf']?></td><td><?=$estado['nome']?></td><td><a href="excluirestado.php?id=<?=$estado['id']?>">X</a></td></tr>
+                            <?php
+                            endforeach;
+                            ?>
 						</table>
+
 						<h2>Form Elements</h2>
 						<form action="#" method="post">
 							<div class="form_settings">
