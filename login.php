@@ -39,7 +39,7 @@ include_once "page_header.php"
                         </p>
                         <p>
                             <span>Senha</span>
-                            <input type="text" name="passwd"/>
+                            <input type="password" name="passwd"/>
                         </p>
                         <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" value="Logar" /></p>
                     </div>

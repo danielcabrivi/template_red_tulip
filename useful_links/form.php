@@ -4,7 +4,6 @@ session_start();
 if (!isset($_SESSION['login_ativo']))
     $_SESSION['login_ativo'] = false;
 
-
 if (!$_SESSION['login_ativo'])
     Header('Location: /segundophp/login.php?redirect='.$_SERVER['REQUEST_URI']);
 
